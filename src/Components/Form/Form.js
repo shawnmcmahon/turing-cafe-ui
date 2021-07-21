@@ -27,7 +27,7 @@ class Form extends Component {
 
   render() {
     return  (
-      <>
+      <form>
         <input
           type="text"
           name="date"
@@ -57,7 +57,7 @@ class Form extends Component {
           onChange={(event) => this.handleChange(event)}
         />
         <button onClick={this.handleSubmit}>Make Reservation</button>
-      </>
+      </form>
 
     )
   }
