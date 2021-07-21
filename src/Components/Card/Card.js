@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Card.css';
 
-const Card = ({ date, id, key, name, number, time, newEntry }) => {
+const Card = ({ date, id, name, number, time, newEntry }) => {
 
   return (
     <div> 
