@@ -2,18 +2,27 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
       this.state = {
         name: '', 
         date: '',
         time: ''
       };
+
+      this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value})
   }
+
+  handleSubmit = () => {
+    let reservationData = this.state;
+    this.props.makeReservation(reservationData)
+  } 
+
+
 
   render() {
     return  (
@@ -39,6 +48,7 @@ class Form extends Component {
           value={this.state.value}
           onChange={(event) => this.handleChange(event)}
         />
+        <button onClick={this.handleSubmit}>Make Reservation</button>
       </>
 
     )
