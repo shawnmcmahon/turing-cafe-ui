@@ -14,11 +14,6 @@ describe('Reservation App', () => {
     .contains('Turing Cafe Reservations')
   })
 
-  it('Should see the form', () => {
-    cy.get('form')
-      .should('be.visible')
-  })
-
   it('Should see the input form', () => {
     cy.get('input')
       .should('be.visible')

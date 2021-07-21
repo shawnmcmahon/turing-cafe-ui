@@ -18,7 +18,8 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value})
   }
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault()
     let reservationData = this.state;
     this.props.makeReservation(reservationData)
   } 
@@ -32,31 +33,39 @@ class Form extends Component {
           type="text"
           name="date"
           placeholder="date"
+          className="date"
           value={this.state.value}
           onChange={(event) => this.handleChange(event)}
+          data-cy="date"
         />
         <input
           type="text"
           name="name"
           placeholder="name"
+          className="name"
           value={this.state.value}
           onChange={(event) => this.handleChange(event)}
+          data-cy="name"
         />
         <input
           type="text"
           name="time"
           placeholder="time"
+          className="time"
           value={this.state.value}
           onChange={(event) => this.handleChange(event)}
+          data-cy="time"
         />
         <input
           type="text"
           name="number"
           placeholder="Number of Guests"
+          className="number"
           value={this.state.value}
           onChange={(event) => this.handleChange(event)}
+          data-cy="number"
         />
-        <button onClick={this.handleSubmit}>Make Reservation</button>
+        <button onClick={(event) => this.handleSubmit(event)}>Make Reservation</button>
       </form>
 
     )
