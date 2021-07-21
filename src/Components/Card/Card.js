@@ -6,11 +6,10 @@ const Card = ({ date, id, name, number, time, newEntry }) => {
   return (
     <div> 
       <div className="card">
-        <p>{date}</p>
-        <p> {id}</p>
         <p>{name}</p>
-        <p>{number}</p>
-        <p>{time}</p>
+        <p>{date}</p>
+        <p>{time} pm</p>
+        <p>Number of Guests: {number}</p>
       </div>
     </div>
   )

@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   makeReservation = (reservationData) => {
-    this.setState({reservations: [...this.state.reservations, reservationData] })
+    this.setState({reservations: [ reservationData, ...this.state.reservations] })
   }
 
 

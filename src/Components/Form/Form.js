@@ -7,7 +7,8 @@ class Form extends Component {
       this.state = {
         name: '', 
         date: '',
-        time: ''
+        time: '',
+        key: Date.now()
       };
 
       this.handleChange = this.handleChange.bind(this)
@@ -45,6 +46,13 @@ class Form extends Component {
           type="text"
           name="time"
           placeholder="time"
+          value={this.state.value}
+          onChange={(event) => this.handleChange(event)}
+        />
+        <input
+          type="text"
+          name="number"
+          placeholder="Number of Guests"
           value={this.state.value}
           onChange={(event) => this.handleChange(event)}
         />
